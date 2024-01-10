@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DIA4_Android</string>
+    <string name="hello_world">Halo Dunia</string>
+    <string name="change_text_view">Ubah text View</string>
+    <string name="input_text_here">Masukkan text</string>
+    <string name="splash_gym_desc">Deskripsi Gym</string>
+    <string name="thrive_gym">Gym</string>
+    <string name="email">Email</string>
+    <string name="password">Kata sandi</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Daftar</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="favorite">Favorite</string>
+</resources>

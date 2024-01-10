@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.dia.dia4_android.bottomnavigation.HomeActivity
 import com.dia.dia4_android.databinding.ActivityLoginBinding
+import com.dia.dia4_android.fragment.HomeFragment
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -27,8 +29,8 @@ class LoginActivity : AppCompatActivity() {
     private fun validateLogin(email: String, password: String) {
         if(email.isNotEmpty() && password.isNotEmpty()) {
             binding.btnLogin.setOnClickListener {
-            val intent = Intent(this, SplashActivity::class.java)
-            startActivity(intent)
+            val intentHome = Intent(this, HomeActivity::class.java)
+            startActivity(intentHome)
             }
         } else {
             showToast("Login invalid. Please fill email and password!")
