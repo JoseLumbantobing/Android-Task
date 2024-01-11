@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.dia.dia4_android.R
 import com.dia.dia4_android.databinding.ActivityHomeBinding
+import com.dia.dia4_android.fragment.FavoriteFragment
 import com.dia.dia4_android.fragment.HomeFragment
 import com.dia.dia4_android.fragment.ProfileFragment
 import com.dia.dia4_android.fragment.TransactionFragment

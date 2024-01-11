@@ -10,6 +10,11 @@
         android:enabled="true"
         android:icon="@drawable/transaction"
         android:title="@string/transaction"/>
+<!--    <item-->
+<!--        android:id="@+id/favoriteMenu"-->
+<!--        android:enabled="true"-->
+<!--        android:icon="@drawable/favorite"-->
+<!--        android:title="@string/favorite"/>-->
     <item
         android:id="@+id/profileMenu"
         android:enabled="true"

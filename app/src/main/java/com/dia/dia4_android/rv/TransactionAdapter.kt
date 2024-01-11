@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.dia.dia4_android.databinding.FragmentTransactionBinding
+import com.dia.dia4_android.databinding.TransactionItemBinding
 import com.dia.dia4_android.rv.TransactionModel
 
 class TransactionAdapter(
@@ -13,7 +14,7 @@ class TransactionAdapter(
         val transactionCallback: TransactionCallback) :
     RecyclerView.Adapter<TransactionAdapter.TransactionViewHolder>() {
 
-    inner class TransactionViewHolder(val binding: FragmentTransactionBinding) :
+    inner class TransactionViewHolder(val binding: TransactionItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         init {
@@ -25,7 +26,7 @@ class TransactionAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransactionViewHolder {
-        val binding = FragmentTransactionBinding.inflate(
+        val binding = TransactionItemBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
             false

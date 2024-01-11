@@ -6,14 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.dia.dia4_android.R
-import com.dia.dia4_android.databinding.FragmentHomeBinding
 import com.dia.dia4_android.databinding.FragmentTransactionBinding
 import com.dia.dia4_android.rv.TransactionAdapter
 import com.dia.dia4_android.rv.TransactionModel
-import com.google.android.material.snackbar.Snackbar
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -25,7 +21,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [TransactionFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class TransactionFragment : Fragment() {
+class TransactionFragment : Fragment(), TransactionAdapter.TransactionCallback {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -91,7 +87,7 @@ class TransactionFragment : Fragment() {
             }
     }
 
-    override fun onTransactionSelected(transaction: TransactionModel) {
-        Log.i("Logger", "Transaction selected ${transaction.id}")
+     override fun onTransactionSelected(transactionModel: TransactionModel) {
+        Log.i("Logger", "Transaction selected ${transactionModel.id}")
     }
 }
