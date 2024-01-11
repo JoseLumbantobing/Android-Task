@@ -21,7 +21,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [TransactionFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class TransactionFragment : Fragment() {
+class TransactionFragment : Fragment(), TransactionAdapter.TransactionCallback {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -63,7 +63,7 @@ class TransactionFragment : Fragment() {
             TransactionModel(3, "300000", "Sender3", "Receiver3", "Success", "2022-01-03", "Debit")
         )
 
-        transactionAdapter = TransactionAdapter(transactionList, transactionAdapter.transactionCallback)
+        transactionAdapter = TransactionAdapter(transactionList, this)
         binding.rvTransaction.adapter = transactionAdapter
     }
 
@@ -87,7 +87,7 @@ class TransactionFragment : Fragment() {
             }
     }
 
-    fun onTransactionSelected(transaction: TransactionModel) {
-        Log.i("Logger", "Transaction selected ${transaction.id}")
+    override fun onTransactionSelected(transactionModel: TransactionModel) {
+        Log.i("Logger", "Transaction selected ${transactionModel.id}")
     }
 }
