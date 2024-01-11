@@ -6,14 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.dia.dia4_android.R
-import com.dia.dia4_android.databinding.FragmentHomeBinding
 import com.dia.dia4_android.databinding.FragmentTransactionBinding
 import com.dia.dia4_android.rv.TransactionAdapter
 import com.dia.dia4_android.rv.TransactionModel
-import com.google.android.material.snackbar.Snackbar
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -67,7 +63,7 @@ class TransactionFragment : Fragment() {
             TransactionModel(3, "300000", "Sender3", "Receiver3", "Success", "2022-01-03", "Debit")
         )
 
-        transactionAdapter = TransactionAdapter(transactionList, this)
+        transactionAdapter = TransactionAdapter(transactionList, transactionAdapter.transactionCallback)
         binding.rvTransaction.adapter = transactionAdapter
     }
 
@@ -91,7 +87,7 @@ class TransactionFragment : Fragment() {
             }
     }
 
-    override fun onTransactionSelected(transaction: TransactionModel) {
+    fun onTransactionSelected(transaction: TransactionModel) {
         Log.i("Logger", "Transaction selected ${transaction.id}")
     }
 }

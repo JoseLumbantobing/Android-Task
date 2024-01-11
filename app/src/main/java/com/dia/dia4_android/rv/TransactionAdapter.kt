@@ -37,15 +37,15 @@ class TransactionAdapter(
 
     override fun onBindViewHolder(holder: TransactionViewHolder, position: Int) {
         val transactionHistory = transactionList[position]
-        with(holder) {
-            binding.tvId.text = transactionHistory.id.toString()
-            binding.tvAmount.text = transactionHistory.amount
-            binding.tvSender.text = transactionHistory.senderName
-            binding.tvReceiver.text = transactionHistory.receiverName
-            binding.tvStatus.text = transactionHistory.transactionStatus
-            binding.tvDate.text = transactionHistory.date
-            binding.tvType.text = transactionHistory.type
-        }
+//        with(holder) {
+//            binding.tvId.text = transactionHistory.id.toString()
+//            binding.tvAmount.text = transactionHistory.amount
+//            binding.tvSender.text = transactionHistory.senderName
+//            binding.tvReceiver.text = transactionHistory.receiverName
+//            binding.tvStatus.text = transactionHistory.transactionStatus
+//            binding.tvDate.text = transactionHistory.date
+//            binding.tvType.text = transactionHistory.type
+//        }
     }
 
     interface TransactionCallback{
