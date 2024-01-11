@@ -11,36 +11,50 @@
     tools:context=".fragment.TransactionFragment">
 
     <TextView
-        android:id="@+id/tvId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="ID: 1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/tvAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Rp 100.000,00"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif-condensed-medium"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvId" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/from_space"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAmount" />
 
     <TextView
         android:id="@+id/tvSender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="From: Jose"
+        tools:text="Jose"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvAmount"
+        app:layout_constraintStart_toEndOf="@+id/tvFrom" />
+
+    <TextView
+        android:id="@+id/tvTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to_space"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvAmount" />
+        app:layout_constraintTop_toBottomOf="@+id/tvFrom" />
 
     <TextView
         android:id="@+id/tvReceiver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="To: Maramis"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSender" />
+        tools:text="Maramis"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvSender"
+        app:layout_constraintStart_toEndOf="@+id/tvTo" />
 
     <TextView
         android:id="@+id/tvType"
@@ -48,6 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         tools:text="Credit"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvReceiver" />
 
@@ -57,6 +72,7 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         tools:text="Success"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

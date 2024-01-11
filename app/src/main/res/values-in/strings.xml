@@ -10,7 +10,11 @@
     <string name="password">Kata sandi</string>
     <string name="login">Login</string>
     <string name="sign_up">Daftar</string>
+    <string name="hello_blank_fragment">Halo Fragment</string>
+    <string name="show_fragment">Tunjukkan Fragment</string>
+    <string name="show_bottom_navigation">Tunjukkan navigasi bawah</string>
     <string name="home">Home</string>
     <string name="profile">Profile</string>
     <string name="favorite">Favorite</string>
+    <string name="transaction">Transaksi</string>
 </resources>

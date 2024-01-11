@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.dia.dia4_android.bottomnavigation.HomeActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         Log.i("On create", "On Create")
 
-        val intent = Intent(this@MainActivity, LoginActivity::class.java)
+        val intent = Intent(this@MainActivity, HomeActivity::class.java)
         intent.putExtra("username", "Andre")
         startActivity(intent)
 //        finish()

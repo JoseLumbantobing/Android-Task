@@ -19,4 +19,8 @@
     <string name="transaction">Transaction</string>
     <string name="home_page">Home Page</string>
     <string name="profile_page">Profile Page</string>
+    <string name="to">To: </string>
+    <string name="from">From: </string>
+    <string name="from_space">"From: "</string>
+    <string name="to_space">"To: "</string>
 </resources>
