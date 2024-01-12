@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         installSplashScreen()
         setContentView(R.layout.activity_main)
 
-        val intent = Intent(this@MainActivity, RegisterActivity::class.java)
+        val intent = Intent(this@MainActivity, LoginActivity::class.java)
         startActivity(intent)
 //        finish()
     }

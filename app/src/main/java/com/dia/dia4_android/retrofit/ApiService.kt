@@ -1,10 +1,13 @@
 package com.dia.dia4_android.retrofit
 
+import com.dia.dia4_android.login.LoginResponse
 import com.dia.dia4_android.register.RegisterResponse
 import retrofit2.Response
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
+import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Query
 
 interface ApiService {
 
@@ -17,4 +20,9 @@ interface ApiService {
         @Field("user_password") userPassword: String
     ): Response<RegisterResponse>
 
+    @GET("v1/auth/login")
+    suspend fun login(
+        @Query("user_email") userEmail: String,
+        @Query("password") userPassword: String
+    ): Response<LoginResponse>
 }
