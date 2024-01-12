@@ -3,9 +3,8 @@ package com.dia.dia4_android
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.dia.dia4_android.bottomnavigation.HomeActivity
+import com.dia.dia4_android.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,37 +12,8 @@ class MainActivity : AppCompatActivity() {
         installSplashScreen()
         setContentView(R.layout.activity_main)
 
-        Log.i("On create", "On Create")
-
-        val intent = Intent(this@MainActivity, HomeActivity::class.java)
-        intent.putExtra("username", "Andre")
+        val intent = Intent(this@MainActivity, RegisterActivity::class.java)
         startActivity(intent)
 //        finish()
     }
-
-    override fun onStart() {
-        super.onStart()
-        Log.i("On Start", "On Start")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Log.i("On Resume", "On Resume")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Log.i("On Pause", "On Pause")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.i("On Stop", "On Stop")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.i("On Destroy", "On Destroy")
-    }
-
 }

@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.widget.Toast
 import com.dia.dia4_android.bottomnavigation.HomeActivity
 import com.dia.dia4_android.databinding.ActivityLoginBinding
-import com.dia.dia4_android.fragment.HomeFragment
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding

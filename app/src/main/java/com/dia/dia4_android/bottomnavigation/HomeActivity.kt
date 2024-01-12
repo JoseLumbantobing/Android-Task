@@ -23,8 +23,8 @@ class HomeActivity : AppCompatActivity() {
                     showFragment(binding.container.id, HomeFragment.newInstance("", ""))
                     true
                 }
-                R.id.transactionMenu -> {
-                    showFragment(binding.container.id, TransactionFragment.newInstance("", ""))
+                R.id.favoriteMenu -> {
+                    showFragment(binding.container.id, FavoriteFragment.newInstance("", ""))
                     true
                 }
                 R.id.profileMenu -> {
